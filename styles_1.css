@@ -1,0 +1,1852 @@
+@font-face {
+	font-family: liima;
+	src: url(fonts/Liima\,\ paperi\,\ sakset2.ttf);
+}
+
+@font-face {
+	font-family: made_tommy;
+	src: url(fonts/MADE\ TOMMY\ Black_PERSONAL\ USE.otf);
+}
+
+*{
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+	--bleu:#082D9E;
+	--orange:#3D1F51;
+	scroll-behavior: smooth;
+}
+
+body{
+	background-color: #0078F9;
+	opacity: 0;
+	transition: opacity 2s;
+}
+
+::-webkit-scrollbar { 
+width: 10px; 
+} 
+::-webkit-scrollbar-track { 
+background: var(--bleu);
+} 
+::-webkit-scrollbar-thumb { 
+background: var(--orange); 
+} 
+::-webkit-scrollbar-thumb:hover { 
+background: #a171c2; 
+} 
+/* Titre */
+
+.titre{
+	position: absolute;
+	top: 8%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	left: 15%;
+	font-size: 4vw;
+	font-family: liima;
+	z-index: 1;
+	text-shadow: 0px 15px 4px rgba(0,0,0,0.5);
+}
+/* Burger_Menu */
+.sidenav {
+	height: 100%;
+	width: 250px;
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	left: -250px;
+	background-color: #e8e8e8;
+	padding-top: 60px;
+	transition: left 0.5s ease;
+}
+  
+.sidenav ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	font-family: made_tommy;
+}
+
+.sidenav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+}
+
+.sidenav a:hover {
+	color: #111;
+}
+
+.sidenav.active {
+	position: fixed;
+	left: 0;
+}
+
+.sidenav .close {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+}
+
+.sidenav #line_pict{
+	width: 40%;
+	margin-left: 25%;
+}
+  
+#logo_menu{
+	position: absolute;
+	z-index: 1;
+	width: 3%;
+	left: 93%;
+}
+
+/* Image_top */
+.image_top{
+	position: relative;
+	margin-bottom: 1.5%;
+}
+
+.image_in{
+	width: 100%;
+	height: 50%;
+}
+
+/*Timer*/
+.date{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: -7%;
+	margin-left: 32%;
+	margin-right: 32%;
+	border-radius: 20px;
+	background-color: var(--bleu);
+	font-family: made_tommy;
+}
+
+.date #timer{
+	position: relative;
+	font-size: 3vw;
+	margin-top: 3%;
+	color: white;
+	text-shadow: 8px 8px 0 rgb(0,0,0,0.5);
+}
+
+.date a{
+	position: relative;
+	background-color: var(--orange);
+	padding: 1%;
+	padding-left: 20%;
+	padding-right: 20%;
+	font-size: 2vw;
+	margin-top: 3%;
+	margin-bottom: 3%;
+	border-radius: 30px;
+	transition: 0.5s;
+}
+
+.date a:hover{
+	transition: 0.5s;
+	box-shadow: 0px 0px 4vh rgb(0,0,0);
+}
+
+/*Concerts*/
+.concerts {
+	position: relative;
+	margin-top: 5%;
+	margin-left: 10%;
+	margin-right: 10%;
+	overflow-y: hidden;
+}
+
+.concerts #titre_concerts{
+	position: relative;
+	font-size: 4vw;
+	margin-top: 4.5%;
+	margin-bottom: 8%;
+	text-align: center;
+	font-family: liima;
+}
+
+.concerts #papier_concert{
+	position: absolute;
+	width: 40%;
+	margin-top: 0.5%;
+	margin-left: 30%;
+	rotate: 5deg;
+}
+
+.pictures_concerts{
+	display: flex;
+}
+
+.concerts .pict{
+	width: 95%;
+	border-radius: 20px;
+	margin: 2%;
+	transition: 0.5s;
+}
+
+.concerts .pict:hover{
+	border-radius: 40px;
+	transition: 0.5s;
+	box-shadow: 0px 0px 1.5vh rgb(0,0,0);
+}
+
+.concerts #pict_1{
+	color: var(--orange);
+}
+
+.concerts #pict_1 #scotch_1{
+	position: absolute;
+	width: 8%;
+	margin-left: -7%;
+	margin-top: -1%;
+}
+
+.concerts #pict_1 #scotch_2{
+	position: absolute;
+	width: 8%;
+	margin-left: -35%;
+	margin-top: 18%;
+	z-index: 5;
+}
+
+.concerts #pict_2{
+	color: var(--bleu);
+}
+
+.concerts #pict_2 #scotch_1{
+	position: absolute;
+	width: 8%;
+	margin-left: -22%;
+	margin-top: -1%;
+	rotate: 40deg;
+	z-index: 5;
+}
+
+.concerts #pict_3{
+	color: var(--orange);
+}
+
+.concerts #pict_3 #scotch_1{
+	position: absolute;
+	width: 8%;
+	margin-left: -35%;
+	margin-top: -1%;
+	rotate: 90deg;
+}
+
+.concerts #pict_3 #scotch_2{
+	position: absolute;
+	width: 8%;
+	margin-left: -5%;
+	margin-top: 18%;
+	z-index: 5;
+	rotate: 90deg;
+}
+
+#pict_1 .text_concerts h1{
+	margin-left: 7%;
+	position: absolute;
+	text-align: center;
+	font-size: 1.5vw;
+	top: 45%;
+	-webkit-text-stroke: white 2px;
+	z-index: 1;
+	font-family: made_tommy;
+}
+
+#pict_1 .text_concerts h2{
+	margin-left: 5%;
+	position: absolute;
+	text-align: center;
+	font-size: 1.5vw;
+	top: 85%;
+	-webkit-text-stroke: white 2px;
+	z-index: 1;
+	font-family: made_tommy;
+}
+
+#pict_2 .text_concerts h1{
+	margin-left: 7%;
+	position: absolute;
+	text-align: center;
+	font-size: 1.5vw;
+	top: 45%;
+	-webkit-text-stroke: white 2px;
+	z-index: 1;
+	font-family: made_tommy;
+}
+
+#pict_2 .text_concerts h2{
+	margin-left: 2.5%;
+	position: absolute;
+	text-align: center;
+	font-size: 1.5vw;
+	top: 85%;
+	-webkit-text-stroke: white 2px;
+	z-index: 1;
+	font-family: made_tommy;
+}
+
+#pict_3 .text_concerts h1{
+	margin-left: 7%;
+	position: absolute;
+	text-align: center;
+	font-size: 1.5vw;
+	top: 45%;
+	-webkit-text-stroke: white 2px;
+	font-family: made_tommy;
+}
+
+#pict_3 .text_concerts h2{
+	margin-left: 5%;
+	position: absolute;
+	text-align: center;
+	font-size: 1.5vw;
+	top: 85%;
+	-webkit-text-stroke: white 2px;
+	font-family: made_tommy;
+}
+
+/*Expos*/
+.expos {
+	position: relative;
+	margin-top: 5%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.expos #titre_expos{
+	position: relative;
+	font-size: 4vw;
+	margin-top: 4.5%;
+	margin-bottom: 8%;
+	text-align: center;
+	font-family: liima;
+}
+
+.expos #papier_expos{
+	position: absolute;
+	width: 40%;
+	margin-top: 0.5%;
+	margin-left: 30%;
+	rotate: 5deg;
+}
+
+.pictures_expos{
+	display: flex;
+	flex-direction: column;
+}
+
+.expos .pict{
+	width: 95%;
+	border-radius: 20px;
+	margin: 2%;
+	transition: 0.5s;
+}
+
+.expos .pict:hover{
+	border-radius: 40px;
+	transition: 0.5s;
+	box-shadow: 0px 0px 1.5vh rgb(0,0,0);
+}
+
+.expos #pict_1{
+	color: var(--bleu);
+}
+
+.expos #pict_1 #scotch_1{
+	position: absolute;
+	width: 15%;
+	margin-left: -103%;
+	margin-top: 8%;
+	rotate: 40deg;
+}
+
+.expos #pict_1 #scotch_2{
+	position: absolute;
+	width: 15%;
+	margin-left: -11%;
+	margin-top: 8%;
+	z-index: 5;
+	rotate: 50deg;
+}
+
+.expos #pict_2{
+	color: var(--orange);
+}
+
+.expos #pict_2 #scotch_1{
+	position: absolute;
+	width: 15%;
+	margin-left: -103%;
+	margin-top: 8%;
+	rotate: 30deg;
+}
+
+.expos #pict_2 #scotch_2{
+	position: absolute;
+	width: 15%;
+	margin-left: -11%;
+	margin-top: 8%;
+	z-index: 5;
+	rotate: 70deg;
+}
+
+
+#pict_1 .text_expos h1{
+	margin-left: 38%;
+	position: absolute;
+	text-align: center;
+	font-size: 2vw;
+	top: 28%;
+	-webkit-text-stroke: white 2px;
+	z-index: 1;
+	font-family: made_tommy;
+}
+
+#pict_1 .text_expos h2{
+	margin-left: 41%;
+	position: absolute;
+	text-align: center;
+	font-size: 2vw;
+	top: 42%;
+	-webkit-text-stroke: white 2px;
+	z-index: 1;
+	font-family: made_tommy;
+}
+
+#pict_2 .text_expos h1{
+	margin-left: 35%;
+	position: absolute;
+	text-align: center;
+	font-size: 2vw;
+	top: 65%;
+	-webkit-text-stroke: white 2px;
+	z-index: 1;
+	font-family: made_tommy;
+}
+
+#pict_2 .text_expos h2{
+	margin-left: 38%;
+	position: absolute;
+	text-align: center;
+	font-size: 2vw;
+	top: 80%;
+	-webkit-text-stroke: white 2px;
+	z-index: 1;
+	font-family: made_tommy;
+}
+
+/*Workshop*/
+.workshop {
+	position: relative;
+	margin-top: 5%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.workshop #titre_workshop{
+	position: relative;
+	font-size: 4vw;
+	margin-top: 4.5%;
+	margin-bottom: 8%;
+	text-align: center;
+	font-family: liima;
+}
+
+.workshop #papier_workshop{
+	position: absolute;
+	width: 40%;
+	margin-top: 0.5%;
+	margin-left: 30%;
+	rotate: -5deg;
+}
+
+.pictures_workshop{
+	display: flex;
+	flex-direction: column;
+}
+
+.workshop .pict{
+	width: 95%;
+	border-radius: 20px;
+	margin: 2%;
+	transition: 0.5s;
+}
+
+.workshop .pict:hover{
+	border-radius: 40px;
+	transition: 0.5s;
+	box-shadow: 0px 0px 1.5vh rgb(0,0,0);
+}
+
+.workshop #pict_1{
+	color: var(--bleu);
+}
+
+.workshop #pict_1 #scotch_1{
+	position: absolute;
+	width: 15%;
+	margin-left: -102%;
+	margin-top: -2%;
+	rotate: 90deg;
+}
+
+.workshop #pict_1 #scotch_2{
+	position: absolute;
+	width: 15%;
+	margin-left: -11%;
+	margin-top: 17%;
+	z-index: 5;
+	rotate: 90deg;
+}
+
+.workshop #pict_2{
+	color: var(--orange);
+}
+
+.workshop #pict_2 #scotch_1{
+	position: absolute;
+	width: 15%;
+	margin-left: -103%;
+	margin-top: 8%;
+	rotate: 40deg;
+}
+
+.workshop #pict_2 #scotch_2{
+	position: absolute;
+	width: 15%;
+	margin-left: -11%;
+	margin-top: 8%;
+	z-index: 5;
+	rotate: 50deg;
+}
+
+#pict_1 .text_workshop h1{
+	margin-left: 38%;
+	position: absolute;
+	text-align: center;
+	font-size: 2vw;
+	top: 28%;
+	-webkit-text-stroke: white 2px;
+	z-index: 1;
+	font-family: made_tommy;
+}
+
+#pict_1 .text_workshop h2{
+	margin-left: 27%;
+	position: absolute;
+	text-align: center;
+	font-size: 2vw;
+	top: 42%;
+	-webkit-text-stroke: white 2px;
+	z-index: 1;
+	font-family: made_tommy;
+}
+
+#pict_2 .text_workshop h1{
+	margin-left: 35%;
+	position: absolute;
+	text-align: center;
+	font-size: 2vw;
+	top: 65%;
+	-webkit-text-stroke: white 2px;
+	z-index: 1;
+	font-family: made_tommy;
+}
+
+#pict_2 .text_workshop h2{
+	margin-left: 12%;
+	position: absolute;
+	text-align: center;
+	font-size: 2vw;
+	top: 80%;
+	-webkit-text-stroke: white 2px;
+	z-index: 1;
+	font-family: made_tommy;
+}
+
+/*Conferences*/
+.conferences {
+	position: relative;
+	margin-top: 5%;
+	margin-left: 10%;
+	margin-right: 10%;
+	overflow-y: hidden;
+}
+
+.conferences #titre_conferences{
+	position: relative;
+	font-size: 4vw;
+	margin-top: 4.5%;
+	margin-bottom: 8%;
+	text-align: center;
+	font-family: liima;
+}
+
+.conferences #papier_conferences{
+	position: absolute;
+	width: 40%;
+	margin-top: 0.5%;
+	margin-left: 30%;
+	rotate: -5deg;
+}
+
+.pictures_conferences{
+	display: flex;
+}
+
+.conferences .pict{
+	width: 95%;
+	border-radius: 20px;
+	margin: 2%;
+	transition: 0.5s;
+}
+
+.conferences .pict:hover{
+	border-radius: 40px;
+	transition: 0.5s;
+	box-shadow: 0px 0px 1.5vh rgb(0,0,0);
+}
+
+.conferences #pict_1{
+	color: var(--orange);
+}
+
+.conferences #pict_1 #scotch_1{
+	position: absolute;
+	width: 8%;
+	margin-left: -7%;
+	margin-top: -1%;
+}
+
+.conferences #pict_1 #scotch_2{
+	position: absolute;
+	width: 8%;
+	margin-left: -35%;
+	margin-top: 18%;
+	z-index: 5;
+}
+
+.conferences #pict_2{
+	color: var(--bleu);
+}
+
+.conferences #pict_2 #scotch_1{
+	position: absolute;
+	width: 8%;
+	margin-left: -22%;
+	margin-top: -1%;
+	rotate: 40deg;
+	z-index: 5;
+}
+
+.conferences #pict_3{
+	color: var(--orange);
+}
+
+.conferences #pict_3 #scotch_1{
+	position: absolute;
+	width: 8%;
+	margin-left: -35%;
+	margin-top: -1%;
+	rotate: 90deg;
+}
+
+.conferences #pict_3 #scotch_2{
+	position: absolute;
+	width: 8%;
+	margin-left: -5%;
+	margin-top: 18%;
+	z-index: 5;
+	rotate: 90deg;
+}
+
+#pict_1 .text_conferences h1{
+	margin-left: 7%;
+	position: absolute;
+	text-align: center;
+	font-size: 1.5vw;
+	top: 45%;
+	-webkit-text-stroke: white 2px;
+	z-index: 1;
+	font-family: made_tommy;
+}
+
+#pict_1 .text_conferences h2{
+	margin-left: 5%;
+	position: absolute;
+	text-align: center;
+	font-size: 1.5vw;
+	top: 80%;
+	-webkit-text-stroke: white 2px;
+	z-index: 1;
+	font-family: made_tommy;
+}
+
+#pict_2 .text_conferences h1{
+	margin-left: 7%;
+	position: absolute;
+	text-align: center;
+	font-size: 1.5vw;
+	top: 45%;
+	-webkit-text-stroke: white 2px;
+	z-index: 1;
+	font-family: made_tommy;
+}
+
+#pict_2 .text_conferences h2{
+	margin-left: 2.5%;
+	position: absolute;
+	text-align: center;
+	font-size: 1.5vw;
+	top: 80%;
+	-webkit-text-stroke: white 2px;
+	z-index: 1;
+	font-family: made_tommy;
+}
+
+#pict_3 .text_conferences h1{
+	margin-left: 7%;
+	position: absolute;
+	text-align: center;
+	font-size: 1.5vw;
+	top: 45%;
+	-webkit-text-stroke: white 2px;
+	z-index: 1;
+	font-family: made_tommy;
+}
+
+#pict_3 .text_conferences h2{
+	margin-left: 7%;
+	position: absolute;
+	text-align: center;
+	font-size: 1.5vw;
+	top: 80%;
+	-webkit-text-stroke: white 2px;
+	z-index: 1;
+	font-family: made_tommy;
+}
+
+/*Performances*/
+.performances {
+	position: relative;
+	margin-top: 5%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.performances #titre_performances{
+	position: relative;
+	font-size: 3.5vw;
+	margin-top: 4.5%;
+	margin-bottom: 8%;
+	text-align: center;
+	font-family: liima;
+}
+
+.performances #papier_performances{
+	position: absolute;
+	width: 40%;
+	margin-top: 0.5%;
+	margin-left: 30%;
+	rotate: -5deg;
+}
+
+.pictures_performances{
+	display: flex;
+	flex-direction: column;
+}
+
+.performances .pict{
+	width: 95%;
+	border-radius: 20px;
+	margin: 2%;
+	transition: 0.5s;
+}
+
+.performances .pict:hover{
+	border-radius: 40px;
+	transition: 0.5s;
+	box-shadow: 0px 0px 1.5vh rgb(0,0,0);
+}
+
+.performances #pict_1{
+	color: var(--bleu);
+}
+
+.performances #pict_1 #scotch_1{
+	position: absolute;
+	width: 15%;
+	margin-left: -102%;
+	margin-top: -2%;
+	rotate: 90deg;
+}
+
+.performances #pict_1 #scotch_2{
+	position: absolute;
+	width: 15%;
+	margin-left: -11%;
+	margin-top: 17%;
+	z-index: 5;
+	rotate: 90deg;
+}
+
+.performances #pict_2{
+	color: var(--orange);
+}
+
+.performances #pict_2 #scotch_1{
+	position: absolute;
+	width: 15%;
+	margin-left: -103%;
+	margin-top: 8%;
+	rotate: 30deg;
+}
+
+.performances #pict_2 #scotch_2{
+	position: absolute;
+	width: 15%;
+	margin-left: -11%;
+	margin-top: 8%;
+	z-index: 5;
+	rotate: 70deg;
+}
+
+#pict_1 .text_performances h1{
+	margin-left: 38%;
+	position: absolute;
+	text-align: center;
+	font-size: 2vw;
+	top: 28%;
+	-webkit-text-stroke: white 2px;
+	z-index: 1;
+	font-family: made_tommy;
+}
+
+#pict_1 .text_performances h2{
+	margin-left: 33%;
+	position: absolute;
+	text-align: center;
+	font-size: 2vw;
+	top: 50%;
+	-webkit-text-stroke: white 2px;
+	z-index: 1;
+	font-family: made_tommy;
+}
+
+#pict_2 .text_performances h1{
+	margin-left: 38%;
+	position: absolute;
+	text-align: center;
+	font-size: 2vw;
+	top: 65%;
+	-webkit-text-stroke: white 2px;
+	z-index: 1;
+	font-family: made_tommy;
+}
+
+#pict_2 .text_performances h2{
+	margin-left: 30%;
+	position: absolute;
+	text-align: center;
+	font-size: 2vw;
+	top: 90%;
+	-webkit-text-stroke: white 2px;
+	z-index: 1;
+	font-family: made_tommy;
+}
+
+/*Brochure*/
+.brochure{
+	position: relative;
+	background-color: black;
+	color: white;
+	font-family: made_tommy;
+	text-align: center;
+	margin-left: 35%;
+	margin-right: 35%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	border-radius: 15px;
+	padding-top: 0.5%;
+	padding-bottom: 0.5%;
+}
+
+.brochure h1{
+	font-size: 1.25vw;
+	margin-bottom: 2%;
+}
+
+.brochure a{
+	position: relative;
+	background-color: var(--bleu);
+	padding-top: 0.5%;
+	padding-bottom: 0.5%;
+	padding-left: 12%;
+	padding-right: 12%;
+	border-radius: 10px;
+	font-size: 2vw;
+	transition: 0.5s;
+}
+
+.brochure a:hover{
+	border-radius: 30px;
+	transition: 0.5s;
+}
+
+/*Reserver*/
+.reservations{
+	padding: 8%;
+	padding-top: 2%;
+	background-color: var(--orange);
+}
+
+.reservations h1{
+	position: relative;
+	font-family: liima;
+	color: white;
+	font-size: 2vw;
+	text-shadow: 0px 15px 4px rgba(0,0,0,0.5);
+}
+
+.reservations h2{
+	position: relative;
+	font-family: made_tommy;
+	color: white;
+	font-size: 1vw;
+	margin-bottom: 3%;
+}
+
+.reservations #duree{
+	position: relative;
+	font-size: 2vw;
+	padding: 1%;
+	padding-left: 5%;
+	padding-right: 5%;
+	margin-right: 5%;
+	border-radius: 15px;
+	font-family: made_tommy;
+	color: white;
+	background-color: #0078F9;
+}
+
+.reservations #quantite{
+	position: relative;
+	font-size: 2vw;
+	padding: 1%;
+	padding-left: 5%;
+	padding-right: 5%;
+	margin-right: 5%;
+	border-radius: 15px;
+	font-family: made_tommy;
+	color: white;
+	background-color: #0078F9;
+}
+
+.reservations .submiting{
+	position: relative;
+	font-size: 1.5vw;
+	padding: 1%;
+	padding-left: 5%;
+	padding-right: 5%;
+	margin-right: 5%;
+	border-radius: 15px;
+	font-family: made_tommy;
+	color: white;
+	border-style: hidden;
+	transition: 0.5s;
+	background-color: var(--bleu);
+}
+
+.reservations #duree:after{
+	color: var(--bleu);
+}
+
+.reservations .submiting:hover{
+	border-radius: 30px;
+	transition: 0.5s;
+}
+
+/*Réseaux*/
+.reseaux{
+	position: relative;
+	margin-top: -6.5%;
+	background-color: white;
+	box-shadow: 0px 0px 10vh rgb(0,0,0);
+}
+
+.reseaux h1{
+	position: relative;
+	font-size: 3.5vw;
+	font-family: liima;
+	text-align: center;
+	margin-top: 5%;
+}
+
+.reseaux .post_haut{
+	display: flex;
+	margin-top: 2%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.reseaux .post_haut #post_1{
+	border-style: solid;
+	margin-right: 2%;
+}
+
+.reseaux .post_haut #post_2{
+	border-style: solid;
+	margin-right: 2%;
+}
+
+.reseaux .post_haut #post_3{
+	border-style: solid;
+}
+
+.reseaux .post_bas{
+	display: flex;
+	margin-top: 2%;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-bottom: 2%;
+}
+
+.reseaux .post_bas #post_1{
+	border-style: solid;
+	margin-right: 2%;
+}
+
+.reseaux .post_bas #post_2{
+	border-style: solid;
+	margin-right: 2%;
+}
+
+.reseaux .post_bas #post_3{
+	border-style: solid;
+}
+
+.reseaux .bas{
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 5%;
+}
+
+.reseaux #insta_logo{
+	position: relative;
+	width: 5%;
+}
+
+.reseaux h2{
+	position: relative;
+	font-size: 1.5vw;
+	font-family: made_tommy;
+	text-align: center;
+}
+
+.reseaux #facebook_logo{
+	position: relative;
+	width: 5%;
+}
+
+/*Copyright*/
+.copyrigth h2{
+	margin-top: 1%;
+	position: relative;
+	text-align: center;
+	font-size: 1vw;
+	font-family: made_tommy;
+	margin-bottom: 1%;
+}
+
+@media screen and (orientation:portrait){
+	#logo_menu{
+		position: absolute;
+		z-index: 1;
+		width: 9%;
+		left: 90%;
+	}
+	
+	#scotch_1{
+		display: none;
+	}
+
+	#scotch_2{
+		display: none;
+	}
+
+
+	/*Timer*/
+	.date{
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin-top: -11%;
+		margin-left: 28%;
+		margin-right: 28%;
+		border-radius: 20px;
+		background-color: var(--bleu);
+		font-family: made_tommy;
+	}
+
+	.date #timer{
+		position: relative;
+		font-size: 5vw;
+		margin-top: 3%;
+		color: white;
+		text-shadow: 8px 8px 0 rgb(0,0,0,0.5);
+	}
+
+	.date a{
+		position: relative;
+		background-color: var(--orange);
+		padding: 1%;
+		padding-left: 20%;
+		padding-right: 20%;
+		font-size: 3vw;
+		margin-top: 3%;
+		margin-bottom: 3%;
+		border-radius: 30px;
+		transition: 0.5s;
+	}
+
+	.date a:hover{
+		transition: 0.5s;
+		box-shadow: 0px 0px 4vh rgb(0,0,0);
+	}
+
+	/*Concerts*/
+	.concerts {
+		position: relative;
+		margin-top: 5%;
+		margin-left: 10%;
+		margin-right: 10%;
+		overflow-y: hidden;
+	}
+
+	.concerts #titre_concerts{
+		position: relative;
+		font-size: 8vw;
+		margin-top: 4.5%;
+		margin-bottom: 8%;
+		text-align: center;
+		font-family: liima;
+	}
+
+	.concerts #papier_concert{
+		position: absolute;
+		width: 80%;
+		margin-top: -4%;
+		margin-left: 10%;
+		rotate: 5deg;
+	}
+
+	.pictures_concerts{
+		display: flex;
+		flex-direction: column ;
+	}
+
+	.concerts .pict{
+		width: 95%;
+		border-radius: 20px;
+		margin: 2%;
+		transition: 0.5s;
+	}
+
+	.concerts #pict_1{
+		color: var(--orange);
+	}
+
+	.concerts #pict_2{
+		color: var(--bleu);
+	}
+
+	.concerts #pict_3{
+		color: var(--orange);
+	}
+
+	#pict_1 .text_concerts h1{
+		margin-left: 13%;
+		position: absolute;
+		text-align: center;
+		font-size: 6vw;
+		top: 12%;
+		-webkit-text-stroke: white 2px;
+		z-index: 1;
+		font-family: made_tommy;
+	}
+
+	#pict_1 .text_concerts h2{
+		margin-left: 8%;
+		position: absolute;
+		text-align: center;
+		font-size: 6vw;
+		top: 30%;
+		-webkit-text-stroke: white 2px;
+		z-index: 1;
+		font-family: made_tommy;
+	}
+
+	#pict_2 .text_concerts h1{
+		margin-left: 17%;
+		position: absolute;
+		text-align: center;
+		font-size: 6vw;
+		top: 42%;
+		-webkit-text-stroke: white 2px;
+		z-index: 1;
+		font-family: made_tommy;
+	}
+
+	#pict_2 .text_concerts h2{
+		margin-left: 5%;
+		position: absolute;
+		text-align: center;
+		font-size: 5.25vw;
+		top: 61%;
+		-webkit-text-stroke: white 2px;
+		z-index: 1;
+		font-family: made_tommy;
+	}
+
+	#pict_3 .text_concerts h1{
+		margin-left: 11%;
+		position: absolute;
+		text-align: center;
+		font-size: 6vw;
+		top: 72%;
+		-webkit-text-stroke: white 2px;
+		z-index: 1;
+		font-family: made_tommy;
+	}
+
+	#pict_3 .text_concerts h2{
+		margin-left: 5%;
+		position: absolute;
+		text-align: center;
+		font-size: 6vw;
+		top: 90%;
+		-webkit-text-stroke: white 2px;
+		z-index: 1;
+		font-family: made_tommy;
+	}
+
+	/*Expos*/
+	.expos {
+		position: relative;
+		margin-top: 5%;
+		margin-left: 10%;
+		margin-right: 10%;
+		overflow-y: hidden;
+	}
+
+	.expos #titre_expos{
+		position: relative;
+		font-size: 8vw;
+		margin-top: 4.5%;
+		margin-bottom: 8%;
+		text-align: center;
+		font-family: liima;
+	}
+
+	.expos #papier_expos{
+		position: absolute;
+		width: 80%;
+		margin-top: -4%;
+		margin-left: 10%;
+		rotate: 5deg;
+	}
+
+	.pictures_expos{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.expos .pict{
+		width: 100%;
+		border-radius: 20px;
+		margin: 2%;
+		transition: 0.5s;
+	}
+
+	.expos .pict:hover{
+		border-radius: 40px;
+		transition: 0.5s;
+		box-shadow: 0px 0px 1.5vh rgb(0,0,0);
+	}
+
+	.expos #pict_1{
+		color: var(--bleu);
+	}
+
+	.expos #pict_2{
+		color: var(--orange);
+	}
+
+	#pict_1 .text_expos h1{
+		margin-left: 30%;
+		position: absolute;
+		text-align: center;
+		font-size: 3.5vw;
+		top: 31%;
+		-webkit-text-stroke: white 0.5px;
+		z-index: 1;
+		font-family: made_tommy;
+	}
+
+	#pict_1 .text_expos h2{
+		margin-left: 34%;
+		position: absolute;
+		text-align: center;
+		font-size: 4vw;
+		top: 49%;
+		-webkit-text-stroke: white 1px;
+		z-index: 1;
+		font-family: made_tommy;
+	}
+
+	#pict_2 .text_expos h1{
+		margin-left: 28%;
+		position: absolute;
+		text-align: center;
+		font-size: 3.5vw;
+		top: 69%;
+		-webkit-text-stroke: white 0.5px;
+		z-index: 1;
+		font-family: made_tommy;
+	}
+
+	#pict_2 .text_expos h2{
+		margin-left: 32%;
+		position: absolute;
+		text-align: center;
+		font-size: 4vw;
+		top: 89%;
+		-webkit-text-stroke: white 1px;
+		z-index: 1;
+		font-family: made_tommy;
+	}
+
+	/*Workshop*/
+	.workshop {
+		position: relative;
+		margin-top: 5%;
+		margin-left: 10%;
+		margin-right: 10%;
+		overflow-y: hidden;
+	}
+
+	.workshop #titre_workshop{
+		position: relative;
+		font-size: 8vw;
+		margin-top: 4.5%;
+		margin-bottom: 8%;
+		text-align: center;
+		font-family: liima;
+	}
+
+	.workshop #papier_workshop{
+		position: absolute;
+		width: 80%;
+		margin-top: -4%;
+		margin-left: 10%;
+		rotate: 5deg;
+	}
+
+	.pictures_workshops{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.workshop .pict{
+		width: 100%;
+		border-radius: 20px;
+		margin: 2%;
+		transition: 0.5s;
+	}
+
+	.workshop .pict:hover{
+		border-radius: 40px;
+		transition: 0.5s;
+		box-shadow: 0px 0px 1.5vh rgb(0,0,0);
+	}
+
+	.workshop #pict_1{
+		color: var(--bleu);
+	}
+
+	.workshop #pict_2{
+		color: var(--orange);
+	}
+
+	#pict_1 .text_workshop h1{
+		margin-left: 31%;
+		position: absolute;
+		text-align: center;
+		font-size: 3.5vw;
+		top: 31%;
+		-webkit-text-stroke: white 0.5px;
+		z-index: 1;
+		font-family: made_tommy;
+	}
+
+	#pict_1 .text_workshop h2{
+		margin-left: 11%;
+		position: absolute;
+		text-align: center;
+		font-size: 3.5vw;
+		top: 52%;
+		-webkit-text-stroke: white 0.5px;
+		z-index: 1;
+		font-family: made_tommy;
+	}
+
+	#pict_2 .text_workshop h1{
+		margin-left: 32%;
+		position: absolute;
+		text-align: center;
+		font-size: 3.5vw;
+		top: 69%;
+		-webkit-text-stroke: white 0.5px;
+		z-index: 1;
+		font-family: made_tommy;
+	}
+
+	#pict_2 .text_workshop h2{
+		margin-left: 3%;
+		position: absolute;
+		text-align: center;
+		font-size: 3.5vw;
+		top: 82%;
+		-webkit-text-stroke: white 0.5px;
+		z-index: 1;
+		font-family: made_tommy;
+	}
+
+	/*Conferences*/
+	.conferences {
+		position: relative;
+		margin-top: 5%;
+		margin-left: 10%;
+		margin-right: 10%;
+		overflow-y: hidden;
+	}
+
+	.conferences #titre_conferences{
+		position: relative;
+		font-size: 8vw;
+		margin-top: 4.5%;
+		margin-bottom: 8%;
+		text-align: center;
+		font-family: liima;
+	}
+
+	.conferences #papier_conferences{
+		position: absolute;
+		width: 80%;
+		margin-top: -4%;
+		margin-left: 10%;
+		rotate: 5deg;
+	}
+
+	.pictures_conferences{
+		display: flex;
+		flex-direction: column ;
+	}
+
+	.conferences .pict{
+		width: 95%;
+		border-radius: 20px;
+		margin: 2%;
+		transition: 0.5s;
+	}
+
+	.conferences #pict_1{
+		color: var(--orange);
+	}
+
+	.conferences #pict_2{
+		color: var(--bleu);
+	}
+
+	.conferences #pict_3{
+		color: var(--orange);
+	}
+
+	#pict_1 .text_conferences h1{
+		margin-left: 13%;
+		position: absolute;
+		text-align: center;
+		font-size: 6vw;
+		top: 12%;
+		-webkit-text-stroke: white 2px;
+		z-index: 1;
+		font-family: made_tommy;
+	}
+
+	#pict_1 .text_conferences h2{
+		margin-left: 2.5%;
+		position: absolute;
+		text-align: center;
+		font-size: 6vw;
+		top: 26%;
+		-webkit-text-stroke: white 2px;
+		z-index: 1;
+		font-family: made_tommy;
+	}
+
+	#pict_2 .text_conferences h1{
+		margin-left: 17%;
+		position: absolute;
+		text-align: center;
+		font-size: 6vw;
+		top: 42%;
+		-webkit-text-stroke: white 2px;
+		z-index: 1;
+		font-family: made_tommy;
+	}
+
+	#pict_2 .text_conferences h2{
+		margin-left: 2%;
+		position: absolute;
+		text-align: center;
+		font-size: 5.25vw;
+		top: 53%;
+		-webkit-text-stroke: white 1.5px;
+		z-index: 1;
+		font-family: made_tommy;
+	}
+
+	#pict_3 .text_conferences h1{
+		margin-left: 11%;
+		position: absolute;
+		text-align: center;
+		font-size: 6vw;
+		top: 72%;
+		-webkit-text-stroke: white 2px;
+		z-index: 1;
+		font-family: made_tommy;
+	}
+
+	#pict_3 .text_conferences h2{
+		margin-left: 10%;
+		position: absolute;
+		text-align: center;
+		font-size: 6vw;
+		top: 89%;
+		-webkit-text-stroke: white 2px;
+		z-index: 1;
+		font-family: made_tommy;
+	}
+
+	/*Performances*/
+	.performances {
+		position: relative;
+		margin-top: 5%;
+		margin-left: 10%;
+		margin-right: 10%;
+		overflow-y: hidden;
+	}
+
+	.performances #titre_performances{
+		position: relative;
+		font-size: 7vw;
+		margin-top: 4.5%;
+		margin-bottom: 8%;
+		text-align: center;
+		font-family: liima;
+	}
+
+	.performances #papier_performances{
+		position: absolute;
+		width: 80%;
+		margin-top: -4%;
+		margin-left: 10%;
+		rotate: 5deg;
+	}
+
+	.pictures_performances{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.performances .pict{
+		width: 100%;
+		border-radius: 20px;
+		margin: 2%;
+		transition: 0.5s;
+	}
+
+	.performances .pict:hover{
+		border-radius: 40px;
+		transition: 0.5s;
+		box-shadow: 0px 0px 1.5vh rgb(0,0,0);
+	}
+
+	.performances #pict_1{
+		color: var(--bleu);
+	}
+
+	.performances #pict_2{
+		color: var(--orange);
+	}
+
+	#pict_1 .text_performances h1{
+		margin-left: 31%;
+		position: absolute;
+		text-align: center;
+		font-size: 3.5vw;
+		top: 31%;
+		-webkit-text-stroke: white 0.5px;
+		z-index: 1;
+		font-family: made_tommy;
+	}
+
+	#pict_1 .text_performances h2{
+		margin-left: 22%;
+		position: absolute;
+		text-align: center;
+		font-size: 3.5vw;
+		top: 52%;
+		-webkit-text-stroke: white 0.5px;
+		z-index: 1;
+		font-family: made_tommy;
+	}
+
+	#pict_2 .text_performances h1{
+		margin-left: 32%;
+		position: absolute;
+		text-align: center;
+		font-size: 3.5vw;
+		top: 69%;
+		-webkit-text-stroke: white 0.5px;
+		z-index: 1;
+		font-family: made_tommy;
+	}
+
+	#pict_2 .text_performances h2{
+		margin-left: 17%;
+		position: absolute;
+		text-align: center;
+		font-size: 3.5vw;
+		top: 88%;
+		-webkit-text-stroke: white 0.5px;
+		z-index: 1;
+		font-family: made_tommy;
+	}
+
+	/*Brochure*/
+	.brochure{
+		position: relative;
+		background-color: black;
+		color: white;
+		font-family: made_tommy;
+		text-align: center;
+		margin-left: 30%;
+		margin-right: 30%;
+		margin-top: 5%;
+		margin-bottom: 5%;
+		border-radius: 15px;
+		padding-top: 0.5%;
+		padding-bottom: 0.5%;
+	}
+
+	.brochure h1{
+		font-size: 3vw;
+		margin-bottom: 2%;
+	}
+
+	.brochure a{
+		position: relative;
+		background-color: var(--bleu);
+		padding-top: 0.5%;
+		padding-bottom: 0.5%;
+		padding-left: 12%;
+		padding-right: 12%;
+		border-radius: 10px;
+		font-size: 4vw;
+		transition: 0.5s;
+	}
+
+	.brochure a:hover{
+		border-radius: 30px;
+		transition: 0.5s;
+	}
+
+	/*Reserver*/
+	.reservations{
+		padding: 8%;
+		padding-top: 2%;
+		padding-bottom: 10%;
+		background-color: var(--orange);
+	}
+
+	.reservations h1{
+		position: relative;
+		font-family: liima;
+		color: white;
+		font-size: 4vw;
+		text-shadow: 0px 15px 4px rgba(0,0,0,0.5);
+	}
+
+	.reservations h2{
+		position: relative;
+		font-family: made_tommy;
+		color: white;
+		font-size: 2.5vw;
+		margin-bottom: 3%;
+	}
+
+	.reservations #duree{
+		position: relative;
+		font-size: 2.5vw;
+		padding: 1%;
+		padding-left: 5%;
+		padding-right: 5%;
+		margin-right: 2%;
+		border-radius: 15px;
+		font-family: made_tommy;
+		color: white;
+		background-color: #0078F9;
+	}
+
+	.reservations #quantite{
+		position: relative;
+		font-size: 2.5vw;
+		padding: 1%;
+		padding-left: 5%;
+		padding-right: 5%;
+		margin-right: 2%;
+		border-radius: 15px;
+		font-family: made_tommy;
+		color: white;
+		background-color: #0078F9;
+	}
+
+	.reservations .submiting{
+		position: relative;
+		font-size: 2vw;
+		padding: 1%;
+		padding-left: 5%;
+		padding-right: 5%;
+		margin-right: 5%;
+		border-radius: 15px;
+		font-family: made_tommy;
+		color: white;
+		border-style: hidden;
+		transition: 0.5s;
+		background-color: var(--bleu);
+	}
+
+	.reservations #duree:after{
+		color: var(--bleu);
+	}
+
+	.reservations .submiting:hover{
+		border-radius: 30px;
+		transition: 0.5s;
+	}
+
+	/*Réseaux*/
+	.reseaux{
+		position: relative;
+		margin-top: -6.5%;
+		background-color: white;
+	}
+
+	.reseaux h1{
+		position: relative;
+		font-size: 3.5vw;
+		font-family: liima;
+		text-align: center;
+		margin-top: 5%;
+	}
+
+	.reseaux .post_haut{
+		display: flex;
+		margin-top: 2%;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+
+	.reseaux .post_haut #post_1{
+		border-style: solid;
+		margin-right: 2%;
+	}
+
+	.reseaux .post_haut #post_2{
+		border-style: solid;
+		margin-right: 2%;
+	}
+
+	.reseaux .post_haut #post_3{
+		border-style: solid;
+	}
+
+	.reseaux .post_bas{
+		display: flex;
+		margin-top: 2%;
+		margin-left: 5%;
+		margin-right: 5%;
+		margin-bottom: 2%;
+	}
+
+	.reseaux .post_bas #post_1{
+		border-style: solid;
+		margin-right: 2%;
+	}
+
+	.reseaux .post_bas #post_2{
+		border-style: solid;
+		margin-right: 2%;
+	}
+
+	.reseaux .post_bas #post_3{
+		border-style: solid;
+	}
+
+	.reseaux .bas{
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 5%;
+	}
+
+	.reseaux #insta_logo{
+		position: relative;
+		width: 5%;
+	}
+
+	.reseaux h2{
+		position: relative;
+		font-size: 1.5vw;
+		font-family: made_tommy;
+		text-align: center;
+	}
+
+	.reseaux #facebook_logo{
+		position: relative;
+		width: 5%;
+	}
+}

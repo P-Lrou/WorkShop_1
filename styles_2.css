@@ -1,0 +1,1305 @@
+@font-face {
+	font-family: wishleman;
+	src: url(fonts/Wishleman.otf);
+}
+
+@font-face {
+	font-family: modern_m;
+	src: url(fonts/modern\ M.ttf);
+}
+
+@font-face {
+	font-family: basic;
+	src: url(fonts/Basic\ Light.ttf);
+}
+
+*{
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+	--bleu:#082D9E;
+	--orange:#3D1F51;
+	scroll-behavior: smooth;
+}
+
+body{
+	background-color: white;
+	opacity: 0;
+	transition: opacity 2s;
+}
+
+::-webkit-scrollbar { 
+width: 10px; 
+} 
+::-webkit-scrollbar-track { 
+	background: #e7e7e3; 
+} 
+::-webkit-scrollbar-thumb { 
+	background: black;
+	border-radius: 20px; 
+} 
+::-webkit-scrollbar-thumb:hover { 
+	background: #242222; 
+} 
+/* Titre */
+
+.titre{
+	position: absolute;
+	margin-top: 10%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: black;
+	margin-left: 1%;
+	font-size: 1.25vw;
+	font-family: wishleman;
+	z-index: 1;
+	text-shadow: 0px 5px 4px rgba(0,0,0,0.5);
+}
+
+.titre_2 h1{
+	position: absolute;
+	margin-top: 30%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: black;
+	margin-left: 3%;
+	font-size: 6vw;
+	font-family: wishleman;
+	z-index: 1;
+	text-shadow: 0px 5px 3px rgba(0,0,0,0.5);
+}
+
+.titre_2 h2{
+	position: absolute;
+	margin-top: 25%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: black;
+	margin-left: 7%;
+	font-size: 4vw;
+	font-family: wishleman;
+	z-index: 1;
+	text-shadow: 0px 5px 4px rgba(0,0,0,0.5);
+}
+/* Burger_Menu */
+.sidenav {
+	height: 100%;
+	width: 250px;
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	left: -250px;
+	background-color: #e8e8e8;
+	padding-top: 60px;
+	transition: left 0.5s ease;
+}
+  
+.sidenav ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	font-family: wishleman;
+}
+
+.sidenav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+}
+
+.sidenav a:hover {
+	color: #111;
+}
+
+.sidenav.active {
+	left: 0;
+}
+
+.sidenav .close {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+}
+
+.sidenav #line_pict{
+	width: 40%;
+	margin-left: 25%;
+}
+  
+#logo_menu{
+	position: absolute;
+	z-index: 1;
+	width: 3%;
+	left: 93%;
+}
+
+/* Image_top */
+.image_top{
+	position: relative;
+	margin-bottom: 1.5%;
+}
+
+.image_in{
+	width: 100%;
+	height: 50%;
+}
+
+/*Timer*/
+.date{
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	margin-top: -6.15%;
+	margin-left: 32%;
+	margin-right: 32%;
+	background-color: #F6F6F6;
+	font-family: modern_m;
+}
+
+.date #timer{
+	position: relative;
+	font-size: 2vw;
+	margin-top: 3%;
+	margin-left: 3%;
+	margin-right: 3%;
+	color: black;
+}
+
+.date a{
+	position: relative;
+	background-color: #D9D9D9;
+	padding: 1%;
+	padding-left: 5%;
+	padding-right: 5%;
+	font-size: 1.5vw;
+	margin-top: 3%;
+	margin-bottom: 3%;
+	border-radius: 30px;
+	transition: 0.5s;
+}
+
+.date a:hover{
+	transition: 0.5s;
+	box-shadow: 0px 0px 1vh rgb(0,0,0);
+}
+
+/*Concerts*/
+.concerts {
+	position: relative;
+	margin-top: 5%;
+	margin-left: 2%;
+	margin-right: 60%;
+}
+
+.concerts #titre_concerts{
+	position: relative;
+	font-size: 3vw;
+	margin-top: 4.5%;
+	margin-bottom: 3%;
+	font-family: modern_m;
+}
+
+.pictures_concerts{
+	display: flex;
+}
+
+.concerts .pict{
+	width: 95%;
+	margin: 2%;
+	transition: 0.5s;
+	filter: brightness(0.6);
+}
+
+.concerts .pict:hover{
+	border-radius: 20px;
+	transition: 0.5s;
+	box-shadow: 0px 0px 1vh rgb(0,0,0);
+}
+
+#pict_1 .text_concerts h1{
+	margin-left: 13%;
+	position: absolute;
+	text-align: center;
+	font-size: 1vw;
+	top: 52%;
+	z-index: 1;
+	color: white;
+	font-family: basic;
+}
+
+#pict_1 .text_concerts h2{
+	margin-left: 7%;
+	position: absolute;
+	text-align: center;
+	font-size: 1vw;
+	top: 45%;
+	z-index: 1;
+	color: white;
+	font-family: basic;
+}
+
+#pict_2 .text_concerts h1{
+	margin-left: 13%;
+	position: absolute;
+	text-align: center;
+	font-size: 1vw;
+	top: 52%;
+	z-index: 1;
+	color: white;
+	font-family: basic;
+}
+
+#pict_2 .text_concerts h2{
+	margin-left: 7%;
+	position: absolute;
+	text-align: center;
+	font-size: 1vw;
+	top: 45%;
+	z-index: 1;
+	color: white;
+	font-family: basic;
+}
+
+#pict_3 .text_concerts h1{
+	margin-left: 13%;
+	position: absolute;
+	text-align: center;
+	font-size: 1vw;
+	top: 95%;
+	z-index: 1;
+	color: white;
+	font-family: basic;
+}
+
+#pict_3 .text_concerts h2{
+	margin-left: 7%;
+	position: absolute;
+	text-align: center;
+	font-size: 1vw;
+	top: 88%;
+	z-index: 1;
+	color: white;
+	font-family: basic;
+}
+
+#pict_4 .text_concerts h1{
+	margin-left: 13%;
+	position: absolute;
+	text-align: center;
+	font-size: 1vw;
+	top: 95%;
+	z-index: 1;
+	color: white;
+	font-family: basic;
+}
+
+#pict_4 .text_concerts h2{
+	margin-left: 10%;
+	position: absolute;
+	text-align: center;
+	font-size: 1vw;
+	top: 88%;
+	z-index: 1;
+	color: white;
+	font-family: basic;
+}
+
+/*Performances*/
+.performances {
+	position: absolute;
+	margin-top: -44.5%;
+	margin-left: 45%;
+	margin-right: 2%;
+}
+
+.performances #titre_performances{
+	position: relative;
+	font-size: 3vw;
+	margin-top: 4.5%;
+	margin-bottom: 1.5%;
+	font-family: modern_m;
+}
+
+.pictures_performances{
+	display: flex;
+}
+
+.performances .pict{
+	width: 95%;
+	margin: 2%;
+	transition: 0.5s;
+	filter: brightness(0.6);
+}
+
+.performances .pict:hover{
+	border-radius: 20px;
+	transition: 0.5s;
+	box-shadow: 0px 0px 1vh rgb(0,0,0);
+}
+
+#pict_1 .text_performances h1{
+	margin-left: 17%;
+	position: absolute;
+	text-align: center;
+	font-size: 1vw;
+	top: 85%;
+	z-index: 1;
+	color: white;
+	font-family: basic;
+}
+
+#pict_1 .text_performances h2{
+	margin-left: 18.75%;
+	position: absolute;
+	text-align: center;
+	font-size: 1vw;
+	top: 78%;
+	z-index: 1;
+	color: white;
+	font-family: basic;
+}
+
+#pict_2 .text_performances h1{
+	margin-left: 17%;
+	position: absolute;
+	text-align: center;
+	font-size: 1vw;
+	top: 85%;
+	z-index: 1;
+	color: white;
+	font-family: basic;
+}
+
+#pict_2 .text_performances h2{
+	margin-left: 17.5%;
+	position: absolute;
+	text-align: center;
+	font-size: 1vw;
+	top: 78%;
+	z-index: 1;
+	color: white;
+	font-family: basic;
+}
+
+/*Workshop*/
+.workshop {
+	position: absolute;
+	margin-top: -14.5%;
+	margin-left: 45%;
+	margin-right: 2%;
+}
+
+.workshop #titre_workshop{
+	position: relative;
+	font-size: 3vw;
+	margin-top: 4.5%;
+	margin-bottom: 1.5%;
+	font-family: modern_m;
+}
+
+.pictures_workshop{
+	display: flex;
+}
+
+.workshop .pict{
+	width: 95%;
+	margin: 2%;
+	transition: 0.5s;
+	filter: brightness(0.6);
+}
+
+.workshop .pict:hover{
+	border-radius: 20px;
+	transition: 0.5s;
+	box-shadow: 0px 0px 1vh rgb(0,0,0);
+}
+
+#pict_1 .text_workshop h1{
+	margin-left: 17%;
+	position: absolute;
+	text-align: center;
+	font-size: 1vw;
+	top: 85%;
+	z-index: 1;
+	color: white;
+	font-family: basic;
+}
+
+#pict_1 .text_workshop h2{
+	margin-left: 9%;
+	position: absolute;
+	text-align: center;
+	font-size: 1vw;
+	top: 78%;
+	z-index: 1;
+	color: white;
+	font-family: basic;
+}
+
+#pict_2 .text_workshop h1{
+	margin-left: 17%;
+	position: absolute;
+	text-align: center;
+	font-size: 1vw;
+	top: 85%;
+	z-index: 1;
+	color: white;
+	font-family: basic;
+}
+
+#pict_2 .text_workshop h2{
+	margin-left: 0%;
+	position: absolute;
+	text-align: center;
+	font-size: 1vw;
+	top: 72%;
+	z-index: 1;
+	color: white;
+	font-family: basic;
+}
+
+/*conferences*/
+.conferences {
+	position: relative;
+	margin-top: 2%;
+	margin-left: 2%;
+	margin-right: 60%;
+}
+
+.conferences #titre_conferences{
+	position: relative;
+	font-size: 3vw;
+	margin-top: 4.5%;
+	margin-bottom: 3%;
+	font-family: modern_m;
+}
+
+.pictures_conferences{
+	display: flex;
+}
+
+.conferences .pict{
+	width: 95%;
+	margin: 2%;
+	transition: 0.5s;
+	filter: brightness(0.6);
+}
+
+.conferences .pict:hover{
+	border-radius: 20px;
+	transition: 0.5s;
+	box-shadow: 0px 0px 1vh rgb(0,0,0);
+}
+
+#pict_1 .text_conferences h1{
+	margin-left: 13%;
+	position: absolute;
+	text-align: center;
+	font-size: 1vw;
+	top: 49%;
+	z-index: 1;
+	color: white;
+	font-family: basic;
+}
+
+#pict_1 .text_conferences h2{
+	margin-left: 4%;
+	position: absolute;
+	text-align: center;
+	font-size: 1vw;
+	top: 42%;
+	z-index: 1;
+	color: white;
+	font-family: basic;
+}
+
+#pict_2 .text_conferences h1{
+	margin-left: 13%;
+	position: absolute;
+	text-align: center;
+	font-size: 1vw;
+	top: 49%;
+	z-index: 1;
+	color: white;
+	font-family: basic;
+}
+
+#pict_2 .text_conferences h2{
+	margin-left: 2%;
+	position: absolute;
+	text-align: center;
+	font-size: 1vw;
+	top: 42%;
+	z-index: 1;
+	color: white;
+	font-family: basic;
+}
+
+#pict_3 .text_conferences h1{
+	margin-left: 38%;
+	position: absolute;
+	text-align: center;
+	font-size: 1vw;
+	top: 94%;
+	z-index: 1;
+	color: white;
+	font-family: basic;
+}
+
+#pict_3 .text_conferences h2{
+	margin-left: 24%;
+	position: absolute;
+	text-align: center;
+	font-size: 1vw;
+	top: 90%;
+	z-index: 1;
+	color: white;
+	font-family: basic;
+}
+
+/*Expos*/
+.expos {
+	position: absolute;
+	margin-top: -24.5%;
+	margin-left: 45%;
+	margin-right: 2%;
+}
+
+.expos #titre_expos{
+	position: relative;
+	font-size: 3vw;
+	margin-top: 4.5%;
+	margin-bottom: 1.5%;
+	font-family: modern_m;
+}
+
+.pictures_expos{
+	display: flex;
+}
+
+.expos .pict{
+	width: 95%;
+	margin: 2%;
+	transition: 0.5s;
+	filter: brightness(0.6);
+}
+
+.expos .pict:hover{
+	border-radius: 20px;
+	transition: 0.5s;
+	box-shadow: 0px 0px 1vh rgb(0,0,0);
+}
+
+#pict_1 .text_expos h1{
+	margin-left: 14%;
+	position: absolute;
+	text-align: center;
+	font-size: 1vw;
+	top: 85%;
+	z-index: 1;
+	color: white;
+	font-family: basic;
+}
+
+#pict_1 .text_expos h2{
+	margin-left: 19.5%;
+	position: absolute;
+	text-align: center;
+	font-size: 1vw;
+	top: 78%;
+	z-index: 1;
+	color: white;
+	font-family: basic;
+}
+
+#pict_2 .text_expos h1{
+	margin-left: 14%;
+	position: absolute;
+	text-align: center;
+	font-size: 1vw;
+	top: 85%;
+	z-index: 1;
+	color: white;
+	font-family: basic;
+}
+
+#pict_2 .text_expos h2{
+	margin-left: 19.5%;
+	position: absolute;
+	text-align: center;
+	font-size: 1vw;
+	top: 78%;
+	z-index: 1;
+	color: white;
+	font-family: basic;
+}
+
+/*Reserver*/
+.reservations{
+	margin-top: 2%;
+	background-image: url(pictures_2/background_reserver.png);
+	padding: 8%;
+	padding-bottom: 0%;
+	padding-top: 2%;
+	box-shadow: 0px 0px 1vh rgb(0,0,0);
+}
+
+.reservations h1{
+	position: relative;
+	margin-left: 25%;
+	font-family: wishleman;
+	color: black;
+	font-size: 4vw;
+}
+
+.reservations h2{
+	position: relative;
+	font-family: basic;
+	margin-left: 20%;
+	color: white;
+	font-size: 1.5vw;
+}
+
+.reservations #duree{
+	position: relative;
+	font-size: 1vw;
+	margin-top: 2%;
+	margin-left: 30%;
+	margin-bottom: 1%;
+	margin-right: 2%;
+	padding: 1%;
+	border-radius: 15px;
+	font-family: basic;
+	color: black;
+	background-color: #F2F2F2;
+}
+
+.reservations #quantite{
+	position: relative;
+	font-size: 1vw;
+	margin-top: 2%;
+	margin-bottom: 1%;
+	margin-right: 2%;
+	padding: 1%;
+	border-radius: 15px;
+	font-family: basic;
+	color: black;
+	background-color: #F2F2F2;
+}
+
+.reservations .submiting{
+	position: relative;
+	font-size: 1.2vw;
+	padding: 1%;
+	margin-top: 2%;
+	padding-left: 5%;
+	padding-right: 5%;
+	margin-right: 5%;
+	border-radius: 67px;
+	font-family: basic;
+	color: black;
+	border-style: hidden;
+	transition: 0.5s;
+	background-color: #F2F2F2;
+}
+
+.reservations .submiting:hover{
+	box-shadow: 0px 0px 1.5vh rgba(0,0,0,0.9);
+	transition: 0.5s;
+}
+
+/*Réseaux*/
+.reseaux{
+	position: relative;
+	margin-top: 5%;
+}
+
+.reseaux h1{
+	position: relative;
+	font-size: 3.5vw;
+	font-family: modern_m;
+	text-align: center;
+}
+
+.reseaux .post{
+	display: flex;
+	margin-top: 2%;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-bottom: 2%;
+}
+
+.reseaux .post #post_1{
+	border-style: solid;
+	margin-right: 2%;
+}
+
+.reseaux .post #post_2{
+	border-style: solid;
+	margin-right: 2%;
+}
+
+.reseaux .post #post_3{
+	border-style: solid;
+	margin-right: 2%;
+}
+
+.reseaux .post #post_4{
+	border-style: solid;
+}
+
+/*Copyright*/
+.copyrigth h2{
+	margin-top: 1%;
+	position: relative;
+	text-align: center;
+	font-size: 1vw;
+	font-family: basic;
+	margin-bottom: 1%;
+}
+
+@media screen and (orientation:portrait){
+	#logo_menu{
+		position: absolute;
+		z-index: 1;
+		width: 9%;
+		left: 90%;
+	}
+
+	/*Concerts*/
+	.concerts {
+		position: relative;
+		margin-top: 5%;
+		margin-left: 2%;
+		margin-right: 2%;
+	}
+
+	.concerts #titre_concerts{
+		position: relative;
+		font-size: 5vw;
+		margin-top: 4.5%;
+		margin-bottom: 3%;
+		font-family: modern_m;
+	}
+
+	.pictures_concerts{
+		display: flex;
+	}
+
+	.concerts .pict{
+		width: 95%;
+		margin: 2%;
+		transition: 0.5s;
+		filter: brightness(0.6);
+	}
+
+	.concerts .pict:hover{
+		border-radius: 20px;
+		transition: 0.5s;
+		box-shadow: 0px 0px 1vh rgb(0,0,0);
+	}
+
+	#pict_1 .text_concerts h1{
+		margin-left: 11%;
+		position: absolute;
+		text-align: center;
+		font-size: 3vw;
+		top: 50%;
+		z-index: 1;
+		color: white;
+		font-family: basic;
+	}
+
+	#pict_1 .text_concerts h2{
+		margin-left: 3%;
+		position: absolute;
+		text-align: center;
+		font-size: 3vw;
+		top: 41%;
+		z-index: 1;
+		color: white;
+		font-family: basic;
+	}
+
+	#pict_2 .text_concerts h1{
+		margin-left: 11%;
+		position: absolute;
+		text-align: center;
+		font-size: 3vw;
+		top: 50%;
+		z-index: 1;
+		color: white;
+		font-family: basic;
+	}
+
+	#pict_2 .text_concerts h2{
+		margin-left: 3%;
+		position: absolute;
+		text-align: center;
+		font-size: 3vw;
+		top: 41%;
+		z-index: 1;
+		color: white;
+		font-family: basic;
+	}
+
+	#pict_3 .text_concerts h1{
+		margin-left: 12%;
+		position: absolute;
+		text-align: center;
+		font-size: 3vw;
+		top: 93%;
+		z-index: 1;
+		color: white;
+		font-family: basic;
+	}
+
+	#pict_3 .text_concerts h2{
+		margin-left: 5%;
+		position: absolute;
+		text-align: center;
+		font-size: 3vw;
+		top: 84%;
+		z-index: 1;
+		color: white;
+		font-family: basic;
+	}
+
+	#pict_4 .text_concerts h1{
+		margin-left: 11%;
+		position: absolute;
+		text-align: center;
+		font-size: 3vw;
+		top: 93%;
+		z-index: 1;
+		color: white;
+		font-family: basic;
+	}
+
+	#pict_4 .text_concerts h2{
+		margin-left: 8%;
+		position: absolute;
+		text-align: center;
+		font-size: 3vw;
+		top: 84%;
+		z-index: 1;
+		color: white;
+		font-family: basic;
+	}
+
+	/*Performances*/
+	.performances {
+		position: relative;
+		margin-top: 5%;
+		margin-left: 2%;
+		margin-right: 2%;
+	}
+
+	.performances #titre_performances{
+		position: relative;
+		font-size: 5vw;
+		margin-top: 4.5%;
+		margin-bottom: 1.5%;
+		font-family: modern_m;
+	}
+
+	.pictures_performances{
+		display: flex;
+	}
+
+	.performances .pict{
+		width: 95%;
+		margin: 2%;
+		transition: 0.5s;
+		filter: brightness(0.6);
+	}
+
+	.performances .pict:hover{
+		border-radius: 20px;
+		transition: 0.5s;
+		box-shadow: 0px 0px 1vh rgb(0,0,0);
+	}
+
+	#pict_1 .text_performances h1{
+		margin-left: 11%;
+		position: absolute;
+		text-align: center;
+		font-size: 3vw;
+		top: 85%;
+		z-index: 1;
+		color: white;
+		font-family: basic;
+	}
+
+	#pict_1 .text_performances h2{
+		margin-left: 14%;
+		position: absolute;
+		text-align: center;
+		font-size: 3vw;
+		top: 75%;
+		z-index: 1;
+		color: white;
+		font-family: basic;
+	}
+
+	#pict_2 .text_performances h1{
+		margin-left: 12%;
+		position: absolute;
+		text-align: center;
+		font-size: 3vw;
+		top: 85%;
+		z-index: 1;
+		color: white;
+		font-family: basic;
+	}
+
+	#pict_2 .text_performances h2{
+		margin-left: 14%;
+		position: absolute;
+		text-align: center;
+		font-size: 3vw;
+		top: 75%;
+		z-index: 1;
+		color: white;
+		font-family: basic;
+	}
+
+	/*Workshop*/
+	.workshop {
+		position: relative;
+		margin-top: 5%;
+		margin-left: 2%;
+		margin-right: 2%;
+		overflow-y: hidden;
+	}
+
+	.workshop #titre_workshop{
+		position: relative;
+		font-size: 5vw;
+		margin-top: 4.5%;
+		margin-bottom: 1.5%;
+		font-family: modern_m;
+	}
+
+	.pictures_workshop{
+		display: flex;
+	}
+
+	.workshop .pict{
+		width: 95%;
+		margin: 2%;
+		transition: 0.5s;
+		filter: brightness(0.6);
+	}
+
+	.workshop .pict:hover{
+		border-radius: 20px;
+		transition: 0.5s;
+		box-shadow: 0px 0px 1vh rgb(0,0,0);
+	}
+
+	#pict_1 .text_workshop h1{
+		margin-left: 11%;
+		position: absolute;
+		text-align: center;
+		font-size: 3vw;
+		top: 85%;
+		z-index: 1;
+		color: white;
+		font-family: basic;
+	}
+
+	#pict_1 .text_workshop h2{
+		margin-left: 3%;
+		margin-right: 55%;
+		position: absolute;
+		text-align: center;
+		font-size: 3vw;
+		top: 64%;
+		z-index: 1;
+		color: white;
+		font-family: basic;
+	}
+
+	#pict_2 .text_workshop h1{
+		margin-left: 11%;
+		position: absolute;
+		text-align: center;
+		font-size: 3vw;
+		top: 85%;
+		z-index: 1;
+		color: white;
+		font-family: basic;
+	}
+
+	#pict_2 .text_workshop h2{
+		margin-left: 2%;
+		position: absolute;
+		text-align: center;
+		font-size: 3vw;
+		top: 64%;
+		z-index: 1;
+		color: white;
+		font-family: basic;
+	}
+
+	/*conferences*/
+	.conferences {
+		position: relative;
+		margin-top: 5%;
+		margin-left: 2%;
+		margin-right: 2%;
+	}
+
+	.conferences #titre_conferences{
+		position: relative;
+		font-size: 5vw;
+		margin-top: 4.5%;
+		margin-bottom: 3%;
+		font-family: modern_m;
+	}
+
+	.pictures_conferences{
+		display: flex;
+	}
+
+	.conferences .pict{
+		width: 95%;
+		margin: 2%;
+		transition: 0.5s;
+		filter: brightness(0.6);
+	}
+
+	.conferences .pict:hover{
+		border-radius: 20px;
+		transition: 0.5s;
+		box-shadow: 0px 0px 1vh rgb(0,0,0);
+	}
+
+	#pict_1 .text_conferences h1{
+		margin-left: 12%;
+		position: absolute;
+		text-align: center;
+		font-size: 3vw;
+		top: 48%;
+		z-index: 1;
+		color: white;
+		font-family: basic;
+	}
+
+	#pict_1 .text_conferences h2{
+		margin-left: 1%;
+		margin-right: 50%;
+		position: absolute;
+		text-align: center;
+		font-size: 3vw;
+		top: 35%;
+		z-index: 1;
+		color: white;
+		font-family: basic;
+	}
+
+	#pict_2 .text_conferences h1{
+		margin-left: 12%;
+		position: absolute;
+		text-align: center;
+		font-size: 3vw;
+		top: 48%;
+		z-index: 1;
+		color: white;
+		font-family: basic;
+	}
+
+	#pict_2 .text_conferences h2{
+		margin-left: 1%;
+		position: absolute;
+		text-align: center;
+		font-size: 3vw;
+		top: 35%;
+		z-index: 1;
+		color: white;
+		font-family: basic;
+	}
+
+	#pict_3 .text_conferences h1{
+		margin-left: 38%;
+		position: absolute;
+		text-align: center;
+		font-size: 3vw;
+		top: 92%;
+		z-index: 1;
+		color: white;
+		font-family: basic;
+	}
+
+	#pict_3 .text_conferences h2{
+		margin-left: 23%;
+		position: absolute;
+		text-align: center;
+		font-size: 3vw;
+		top: 86%;
+		z-index: 1;
+		color: white;
+		font-family: basic;
+	}
+
+	/*Expos*/
+	.expos {
+		position: relative;
+		margin-top: 5%;
+		margin-left: 2%;
+		margin-right: 2%;
+	}
+
+	.expos #titre_expos{
+		position: relative;
+		font-size: 5vw;
+		margin-top: 4.5%;
+		margin-bottom: 1.5%;
+		font-family: modern_m;
+	}
+
+	.pictures_expos{
+		display: flex;
+	}
+
+	.expos .pict{
+		width: 95%;
+		margin: 2%;
+		transition: 0.5s;
+		filter: brightness(0.6);
+	}
+
+	.expos .pict:hover{
+		border-radius: 20px;
+		transition: 0.5s;
+		box-shadow: 0px 0px 1vh rgb(0,0,0);
+	}
+
+	#pict_1 .text_expos h1{
+		margin-left: 6%;
+		position: absolute;
+		text-align: center;
+		font-size: 3vw;
+		top: 85%;
+		z-index: 1;
+		color: white;
+		font-family: basic;
+	}
+
+	#pict_1 .text_expos h2{
+		margin-left: 14%;
+		position: absolute;
+		text-align: center;
+		font-size: 3vw;
+		top: 75%;
+		z-index: 1;
+		color: white;
+		font-family: basic;
+	}
+
+	#pict_2 .text_expos h1{
+		margin-left: 6%;
+		position: absolute;
+		text-align: center;
+		font-size: 3vw;
+		top: 85%;
+		z-index: 1;
+		color: white;
+		font-family: basic;
+	}
+
+	#pict_2 .text_expos h2{
+		margin-left: 14%;
+		position: absolute;
+		text-align: center;
+		font-size: 3vw;
+		top: 75%;
+		z-index: 1;
+		color: white;
+		font-family: basic;
+	}
+
+	/*Reserver*/
+	.reservations{
+		margin-top: 2%;
+		background-image: url(pictures_2/background_reserver.png);
+		padding-bottom: 0%;
+		padding-top: 2%;
+	}
+
+	.reservations h1{
+		position: relative;
+		margin-left: 15%;
+		font-family: wishleman;
+		color: black;
+		font-size: 6vw;
+	}
+
+	.reservations h2{
+		position: relative;
+		font-family: basic;
+		margin-left: 15%;
+		color: white;
+		margin-top: -8%;
+		font-size: 3vw;
+	}
+
+	.reservations #duree{
+		position: relative;
+		font-size: 3.5vw;
+		margin-top: 2%;
+		margin-left: 3%;
+		margin-bottom: 1%;
+		margin-right: 2%;
+		padding: 1%;
+		border-radius: 15px;
+		font-family: basic;
+		color: black;
+		background-color: #F2F2F2;
+	}
+
+	.reservations #quantite{
+		position: relative;
+		font-size: 3.5vw;
+		margin-top: 2%;
+		margin-bottom: 1%;
+		margin-right: 2%;
+		padding: 1%;
+		border-radius: 15px;
+		font-family: basic;
+		color: black;
+		background-color: #F2F2F2;
+	}
+
+	.reservations .submiting{
+		position: relative;
+		font-size: 3.5vw;
+		padding: 1%;
+		margin-top: 2%;
+		margin-bottom: 1%;
+		padding-left: 5%;
+		padding-right: 5%;
+		border-radius: 67px;
+		font-family: basic;
+		color: black;
+		border-style: hidden;
+		transition: 0.5s;
+		background-color: #F2F2F2;
+	}
+
+	.reservations .submiting:hover{
+		box-shadow: 0px 0px 1.5vh rgba(0,0,0,0.9);
+		transition: 0.5s;
+	}
+}

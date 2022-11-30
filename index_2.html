@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>We are Surreal Festival</title>
+    <link href="styles_2.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/png" sizes="500x500" href="pictures_2/logo_2.png">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, width=device-width, height=device-height">
+  </head>
+
+  <body onload="document.body.style.opacity='1'">
+
+    <div id="mySidenav" class="sidenav">
+      <a id="closeBtn" href="#" class="close">&times;</a>
+      <ul>
+        <li><a href="#concerts"id="concerts_click">◉ Concerts</a></li>
+        <li><a href="#performances"id="performances_click">◉ Performances</a></li>
+        <li><a href="#workshop"id="workshop_click">◉ Workshops</a></li>
+        <li><a href="#conferences"id="conferences_click">◉ Conférences</a></li>
+        <li><a href="#expos"id="expos_click">◉ Expositions</a></li>
+        <li><a href="brochure/Brochure_2.pdf" id="brochure_click" target="_blank">◉ Brochures</a></li>
+        <li><a href="#reseaux"id="reseaux_click">◉ Réseaux</a></li>
+        <li><img src="pictures_2/line.png" id="line_pict"></li>
+        <li><a href="index.html">◉ Site Alice</a></li>
+        <li><a href="index_2.html">◉ Site Louane</a></li>
+      </ul>
+    </div>
+    
+    <a href="#" id="openBtn">
+      <img src="pictures_2/menu.png" id="logo_menu">
+    </a>
+
+    <script>
+      var sidenav = document.getElementById("mySidenav");
+      var openBtn = document.getElementById("openBtn");
+      var closeBtn = document.getElementById("closeBtn");
+      var concerts = document.getElementById("concerts_click");
+      var expos = document.getElementById("expos_click");
+      var workshop = document.getElementById("workshop_click");
+      var conferences = document.getElementById("conferences_click");
+      var performances = document.getElementById("performances_click");
+      var brochure = document.getElementById("brochure_click");
+      var reseaux = document.getElementById("reseaux_click");
+
+      openBtn.onclick = openNav;
+      closeBtn.onclick = closeNav;
+      concerts.onclick = closeNav;
+      expos.onclick = closeNav;
+      workshop.onclick = closeNav;
+      conferences.onclick = closeNav;
+      performances.onclick = closeNav;
+      brochure.onclick = closeNav;
+      reseaux.onclick = closeNav;
+
+      /* Set the width of the side navigation to 250px */
+      function openNav() {
+        sidenav.classList.add("active");
+      }
+
+      /* Set the width of the side navigation to 0 */
+      function closeNav() {
+        sidenav.classList.remove("active");
+      }
+    </script>
+
+    <div class="titre">
+      <h1>We Are Surreal Festival</h1>
+    </div>
+
+    <div class="titre_2">
+      <h2>NEWS</h2>
+      <h1>Ivan Ròd</h1>
+    </div>
+
+    <div class="image_top">
+      <img src="pictures_2/affiche.png" class="image_in">
+    </div>
+
+    <div class="date">
+      <p id="timer"></p>
+      <script>
+        var countDownDate = new Date("March 17, 2023 20:00:00").getTime();
+
+        var x = setInterval(function() {
+
+          var now = new Date().getTime();
+
+          var distance = countDownDate - now;
+
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+          + minutes + "m " + seconds + "s ";
+
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("timer").innerHTML = "EXPIRED";
+          }
+        }, 1000);
+      </script>
+      <a href="#reservation"style="text-decoration: none; color: black;">Reserver ma place</a>
+    </div>
+
+    <div class="concerts" id="concerts">
+      <h1 id="titre_concerts">CONCERTS</h1>
+      <div class="pictures_concerts">
+        <div id="pict_1">
+          <img src="pictures_2/concert_1.jpg" class="pict">
+          <div class="text_concerts">
+            <h1>vend. 17 mars à 20h</h1>
+            <h2>WILL GUTHRIE & l'ENSEMBLE</br>NIST-NAH</h2>
+          </div>
+        </div>
+        <div id="pict_2">
+          <img src="pictures_2/concert_1.jpg" class="pict">
+          <div class="text_concerts">
+            <h1>vend. 17 mars à 1h</h1>
+            <h2>WILL GUTHRIE & l'ENSEMBLE</br>NIST-NAH</h2>
+          </div>
+        </div>
+      </div>
+      <div class="pictures_concerts">  
+        <div id="pict_3">
+          <img src="pictures_2/concert_3.jpg" class="pict">
+          <div class="text_concerts">
+            <h1>sam. 18 mars à 1h</h1>
+            <h2>TÔLE FROIDE + CARNAVAL +</br>LITIGE + CHICHON PISSA</h2>
+          </div>
+        </div>
+        <div id="pict_4">
+          <img src="pictures_2/concert_4.png" class="pict">
+          <div class="text_concerts">
+            <h1>dim. 19 mars à 20h</h1>
+            <h2>ANTHONY LAGUERRE &</br>JÉRÔME NOETINGER</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="performances" id="performances">
+      <h1 id="titre_performances">PERFORMANCES</h1>
+      <div class="pictures_performances">
+        <div id="pict_1">
+          <img src="pictures_2/performances_1.png" class="pict">
+          <div class="text_performances">
+            <h1>vend. 17 mars à 18h</h1>
+            <h2>Natasha Zupan</h2>
+          </div>
+        </div>
+        <div id="pict_2">
+          <img src="pictures_2/performances_2.png" class="pict">
+          <div class="text_performances">
+            <h1>sam. 18 mars à 20h</h1>
+            <h2>Stephan Clondeau</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="workshop" id="workshop">
+      <h1 id="titre_workshop">WORKSHOPS</h1>
+      <div class="pictures_workshop">
+        <div id="pict_1">
+          <img src="pictures_2/workshop_1.png" class="pict">
+          <div class="text_workshop">
+            <h1>VENDREDI 17 MARS</br>22h</h1>
+            <h2> “La klaxon de Johansson” par 404.zero</h2>
+          </div>
+        </div>
+        <div id="pict_2">
+          <img src="pictures_2/workshop_2.png" class="pict">
+          <div class="text_workshop">
+            <h1>SAMEDI 18 MARS</br>22h</h1>
+            <h2>“Painting and eating are almost the same thing” par Full Story</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conferences" id="conferences">
+      <h1 id="titre_conferences">CONFERENCES</h1>
+      <div class="pictures_conferences">
+        <div id="pict_1">
+          <img src="pictures_2/conferences_1.png" class="pict">
+          <div class="text_conferences">
+            <h1>vend. 17 mars à 19h</h1>
+            <h2>“Dali, l'âme et le masque” par</br>Damien Capelazzi, historien des arts.</h2>
+          </div>
+        </div>
+        <div id="pict_2">
+          <img src="pictures_2/conferences_2.png" class="pict">
+          <div class="text_conferences">
+            <h1>sam. 18 mars à 19h</h1>
+            <h2>“Fermez vos yeux, vous</br>verrez” par Jean-Louis Millet, Essayiste</h2>
+          </div>
+        </div>
+      </div>
+      <div class="pictures_conferences">  
+        <div id="pict_3">
+          <img src="pictures_2/conferences_3.png" class="pict">
+          <div class="text_conferences">
+            <h1>dim. 19 mars à 19h</h1>
+            <h2>“Making-of” par Les Carrières de Lumière</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="expos" id="expos">
+      <h1 id="titre_expos">EXPOSITIONS</h1>
+      <div class="pictures_expos">
+        <div id="pict_1">
+          <img src="pictures_2/expos_1.png" class="pict">
+          <div class="text_expos">
+            <h1>sam. 18 mars de 14h à 18h</h1>
+            <h2>Bis Repetita</h2>
+          </div>
+        </div>
+        <div id="pict_2">
+          <img src="pictures_2/expos_2.png" class="pict">
+          <div class="text_expos">
+            <h1>dim. 19 mars de 14h à 18h</h1>
+            <h2>Post mortem</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reservations" id="reservation">
+      <h1>RESERVE&nbsp;&nbsp;DES&nbsp;&nbsp;MAINTENANT !</h1>
+      </br>
+      </br>
+      <h2>Réservez dés maintenant votre pass pour accéder à l’ensemble des événements du festival.</h2>
+      </br>
+      <form name="formulaire"> 
+          <select name="pass" id="duree">
+            <option value="1" selected>Pass 1 jour</option>
+            <option value="2" >Pass 2 jours</option>
+            <option value="3" >Pass 3 jours</option>
+          </select>
+        <select name="number" id="quantite">
+          <option value="1" selected>1</option>
+          <option value="2" >2</option>
+          <option value="3" >3</option>
+          <option value="4" >4</option>
+          <option value="5" >5</option>
+          <option value="6" >6</option>
+          <option value="7" >7</option>
+          <option value="8" >8</option>
+          <option value="9" >9</option>
+        </select>
+        <input type="submit" class="submiting" value="Ajouter au panier" />
+        </form>
+    </div>
+
+    <div class="reseaux" id="reseaux">
+      <h1>#SURREAL FESTIVAL</h1>
+      <div class="post">
+        <img src="pictures_2/post_1.png" id="post_1">
+        <img src="pictures_2/post_2.png" id="post_2">
+        <img src="pictures_2/post_3.png" id="post_3">
+        <img src="pictures_2/post_4.png" id="post_4">
+      </div>
+    </div>
+    
+    <div class="copyrigth">
+      <h2>Copyright 2022-Mentions légales-cookies-CGV</h2>
+    </div>
+    
+  </body>
+</html>

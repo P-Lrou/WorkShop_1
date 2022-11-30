@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>We are Surreal Festival</title>
+    <link href="styles_1.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/png" sizes="500x500" href="pictures_1/logo_1.png">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, width=device-width, height=device-height">
+  </head>
+
+  <body onload="document.body.style.opacity='1'">
+
+    <div id="mySidenav" class="sidenav">
+      <a id="closeBtn" href="#" class="close">&times;</a>
+      <ul>
+        <li><a href="#concerts"id="concerts_click">◉ Concerts</a></li>
+        <li><a href="#expos"id="expos_click">◉ Expositions</a></li>
+        <li><a href="#workshop"id="workshop_click">◉ Workshops</a></li>
+        <li><a href="#conferences"id="conferences_click">◉ Conférences</a></li>
+        <li><a href="#performances"id="performances_click">◉ Performances</a></li>
+        <li><a href="#brochure"id="brochure_click">◉ Brochures</a></li>
+        <li><a href="#reservation"id="reservation_click">◉ Réservations</a></li>
+        <li><a href="#reseaux"id="reseaux_click">◉ Réseaux</a></li>
+        <li><img src="pictures_1/line.png" id="line_pict"></li>
+        <li><a href="index.html">◉ Site Alice</a></li>
+        <li><a href="index_2.html">◉ Site Louane</a></li>
+      </ul>
+    </div>
+    
+    <a href="#" id="openBtn">
+      <img src="pictures_1/menu.png" id="logo_menu">
+    </a>
+
+    <script>
+      var sidenav = document.getElementById("mySidenav");
+      var openBtn = document.getElementById("openBtn");
+      var closeBtn = document.getElementById("closeBtn");
+      var concerts = document.getElementById("concerts_click");
+      var expos = document.getElementById("expos_click");
+      var workshop = document.getElementById("workshop_click");
+      var conferences = document.getElementById("conferences_click");
+      var performances = document.getElementById("performances_click");
+      var brochure = document.getElementById("brochure_click");
+      var reservation = document.getElementById("reservation_click");
+      var reseaux = document.getElementById("reseaux_click");
+
+      openBtn.onclick = openNav;
+      closeBtn.onclick = closeNav;
+      concerts.onclick = closeNav;
+      expos.onclick = closeNav;
+      workshop.onclick = closeNav;
+      conferences.onclick = closeNav;
+      performances.onclick = closeNav;
+      brochure.onclick = closeNav;
+      reservation.onclick = closeNav;
+      reseaux.onclick = closeNav;
+
+      /* Set the width of the side navigation to 250px */
+      function openNav() {
+        sidenav.classList.add("active");
+      }
+
+      /* Set the width of the side navigation to 0 */
+      function closeNav() {
+        sidenav.classList.remove("active");
+      }
+    </script>
+
+    <div class="titre">
+      <h1>WE ARE SURREAL</h1>
+      <h1>2023</h1>
+    </div>
+
+    <div class="image_top">
+      <img src="pictures_1/affiche.png" class="image_in">
+    </div>
+
+    <div class="date">
+      <p id="timer"></p>
+      <script>
+        var countDownDate = new Date("March 17, 2023 20:00:00").getTime();
+
+        var x = setInterval(function() {
+
+          var now = new Date().getTime();
+
+          var distance = countDownDate - now;
+
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+          + minutes + "m " + seconds + "s ";
+
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("timer").innerHTML = "EXPIRED";
+          }
+        }, 1000);
+      </script>
+      <a href="#reservation"style="text-decoration: none; color: white;">Reserver ma place</a>
+    </div>
+
+    <div class="concerts" id="concerts">
+      <img src="pictures_1/papier.png" id="papier_concert">
+      <h1 id="titre_concerts">CONCERTS</h1>
+      <div class="pictures_concerts">
+        <div id="pict_1">
+          <img src="pictures_1/concert_1.png" class="pict">
+          <img src ="pictures_1/scotch.png" id="scotch_1">
+          <img src ="pictures_1/scotch.png" id="scotch_2">
+          <div class="text_concerts">
+            <h1>VENDREDI 17 MARS</br>20h/1h</h1>
+            <h2>WILL GUTHRIE &</br>l'ENSEMBLE NIST-NAH</h2>
+          </div>
+        </div>
+        <div id="pict_2">
+          <img src="pictures_1/concert_2.png" class="pict">
+          <img src ="pictures_1/scotch.png" id="scotch_1">
+          <div class="text_concerts">
+            <h1>SAMEDI 18 MARS</br>1h</h1>
+            <h2>TÔLE FROIDE + CARNAVAL +</br>LITIGE + CHICHON PISSA</h2>
+          </div>
+        </div>
+        <div id="pict_3">
+          <img src="pictures_1/concert_3.png" class="pict">
+          <img src ="pictures_1/scotch.png" id="scotch_1">
+          <img src ="pictures_1/scotch.png" id="scotch_2">
+          <div class="text_concerts">
+            <h1>DIMANCHE 19 MARS</br>20h</h1>
+            <h2>ANTHONY LAGUERRE &</br> JÉRÔME NOETINGER</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="expos" id="expos">
+      <img src="pictures_1/papier.png" id="papier_expos">
+      <h1 id="titre_expos">EXPOS</h1>
+      <div class="pictures_expos">
+        <div id="pict_1">
+          <img src="pictures_1/expos_1.png" class="pict">
+          <img src ="pictures_1/scotch.png" id="scotch_1">
+          <img src ="pictures_1/scotch.png" id="scotch_2">
+          <div class="text_expos">
+            <h1>SAMEDI 18 MARS</br>14h-18h</h1>
+            <h2>BIS REPETITA</h2>
+          </div>
+        </div>
+        <div id="pict_2">
+          <img src="pictures_1/expos_2.png" class="pict">
+          <img src ="pictures_1/scotch.png" id="scotch_1">
+          <img src ="pictures_1/scotch.png" id="scotch_2">
+          <div class="text_expos">
+            <h1>DIMANCHE 19 MARS</br>14h-19h</h1>
+            <h2>POST MORTEM</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="workshop" id="workshop">
+      <img src="pictures_1/papier.png" id="papier_workshop">
+      <h1 id="titre_workshop">WORKSHOPS</h1>
+      <div class="pictures_workshop">
+        <div id="pict_1">
+          <img src="pictures_1/workshop_1.png" class="pict">
+          <img src ="pictures_1/scotch.png" id="scotch_1">
+          <img src ="pictures_1/scotch.png" id="scotch_2">
+          <div class="text_workshop">
+            <h1>VENDREDI 17 MARS</br>22h</h1>
+            <h2> “La klaxon de Johansson” par 404.zero</h2>
+          </div>
+        </div>
+        <div id="pict_2">
+          <img src="pictures_1/workshop_2.png" class="pict">
+          <img src ="pictures_1/scotch.png" id="scotch_1">
+          <img src ="pictures_1/scotch.png" id="scotch_2">
+          <div class="text_workshop">
+            <h1>SAMEDI 18 MARS</br>22h</h1>
+            <h2>“Painting and eating are almost the same thing” par Full Story</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conferences" id="conferences">
+      <img src="pictures_1/papier.png" id="papier_conferences">
+      <h1 id="titre_conferences">CONFERENCES</h1>
+      <div class="pictures_conferences">
+        <div id="pict_1">
+          <img src="pictures_1/conferences_1.png" class="pict">
+          <img src ="pictures_1/scotch.png" id="scotch_1">
+          <img src ="pictures_1/scotch.png" id="scotch_2">
+          <div class="text_conferences">
+            <h1>VENDREDI 17 MARS</br>19h</h1>
+            <h2>“Dali, l'âme et le masque”</br>par Damien Capelazzi,</br>historien des arts.</h2>
+          </div>
+        </div>
+        <div id="pict_2">
+          <img src="pictures_1/conferences_2.png" class="pict">
+          <img src ="pictures_1/scotch.png" id="scotch_1">
+          <div class="text_conferences">
+            <h1>SAMEDI 18 MARS</br>19h</h1>
+            <h2>“Fermez vos yeux, vous verrez”</br>par Jean-Louis Millet,</br>Essayiste</h2>
+          </div>
+        </div>
+        <div id="pict_3">
+          <img src="pictures_1/conferences_3.png" class="pict">
+          <img src ="pictures_1/scotch.png" id="scotch_1">
+          <img src ="pictures_1/scotch.png" id="scotch_2">
+          <div class="text_conferences">
+            <h1>DIMANCHE 19 MARS</br>19h</h1>
+            <h2>“Making-of” par Les</br>Carrières de Lumière</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="performances" id="performances">
+      <img src="pictures_1/papier.png" id="papier_performances">
+      <h1 id="titre_performances">PERFORMANCES</h1>
+      <div class="pictures_performances">
+        <div id="pict_1">
+          <img src="pictures_1/performances_1.png" class="pict">
+          <img src ="pictures_1/scotch.png" id="scotch_1">
+          <img src ="pictures_1/scotch.png" id="scotch_2">
+          <div class="text_performances">
+            <h1>(OUVERTURE)</br>VENDREDI 17 MARS</br>18h</h1>
+            <h2> NATASHA ZUPAN, ARTISTE</h2>
+          </div>
+        </div>
+        <div id="pict_2">
+          <img src="pictures_1/performances_2.png" class="pict">
+          <img src ="pictures_1/scotch.png" id="scotch_1">
+          <img src ="pictures_1/scotch.png" id="scotch_2">
+          <div class="text_performances">
+            <h1>SAMEDI 18 MARS</br>20h</h1>
+            <h2>STEFAN CLONDAU, INGÉNIEUR.</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="brochure" id="brochure">
+      <h1>Télécharger la brochure</h1>
+      <a href="brochure/Brochure_1.pdf"style="text-decoration: none; color: white;" target="_blank">Télécharger</a>
+    </div>
+
+    <div class="reservations" id="reservation">
+      <h1>RESERVE&nbsp;&nbsp;DES&nbsp;&nbsp;MAINTENANT !</h1>
+      </br>
+      </br>
+      <h2>Réservez dès maintenant votre pass pour accéder à l'ensemble des événements du festival.</br>Si la réservation se fait avant le 31 décembre 2022, bénéficiez d'un tarif privilégié.</h2>
+      </br>
+      <form name="formulaire"> 
+          <select name="pass" id="duree">
+            <option value="1" selected>Pass 1 jour</option>
+            <option value="2" >Pass 2 jours</option>
+            <option value="3" >Pass 3 jours</option>
+          </select>
+        <select name="number" id="quantite">
+          <option value="1" selected>1</option>
+          <option value="2" >2</option>
+          <option value="3" >3</option>
+          <option value="4" >4</option>
+          <option value="5" >5</option>
+          <option value="6" >6</option>
+          <option value="7" >7</option>
+          <option value="8" >8</option>
+          <option value="9" >9</option>
+        </select>
+        <input type="submit" class="submiting" value="Ajouter au panier" />
+        </form>
+    </div>
+
+    <div class="reseaux" id="reseaux">
+      <h1>#SURREAL FESTIVAL</h1>
+      <div class="post_haut">
+        <img src="pictures_1/post_1.png" id="post_1">
+        <img src="pictures_1/post_2.png" id="post_2">
+        <img src="pictures_1/post_3.png" id="post_3">
+      </div>
+      <div class="post_bas">
+        <img src="pictures_1/post_4.png" id="post_1">
+        <img src="pictures_1/post_5.png" id="post_2">
+        <img src="pictures_1/post_6.png" id="post_3">
+      </div>
+      <div class="bas">
+        <img src="pictures_1/insta.png" id="insta_logo">
+        <h2>Abonnez vous à la</br>Newsletter</h2>
+        <img src="pictures_1/facebook.png" id="facebook_logo">
+      </div>
+    </div>
+
+    <div class="copyrigth">
+      <h2>Copyright 2022-Mentions légales-cookies-CGV</h2>
+    </div>
+    
+  </body>
+</html>
